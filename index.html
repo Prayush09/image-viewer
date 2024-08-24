@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="title">
+            <img id="player" src="./images/player.png" alt="">
+            <span>Image Viewer</span>
+        </div>
+        <div>
+            <!-- Hidden file input -->
+            <input type="file" id="fileUpload" accept=".jpg, .jpeg" style="display: none;" onchange="handleFileSelect()">
+            <!-- Trigger button -->
+            <span><button onclick="document.getElementById('fileUpload').click();"><img id="slide" src="./images/upload.png" alt=""></button></span>
+            <span><button onclick="toggleSlideshow()"><img id="slide" src="./images/slideshow.png" alt=""></button></span>
+            <span><button onclick="diagonal()"><img id="diag" src="./images/diagonal.png" alt=""></button></span>
+        </div>
+    </nav>
+
+    <div class="gallery">
+        <!-- Your gallery items -->
+        <div class="gallery-item">
+            <img src="./wallpapers/3.jpg" alt="Image 1" id="1">
+        </div>
+        <!-- More gallery items here -->
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
+
